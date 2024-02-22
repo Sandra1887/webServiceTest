@@ -1,17 +1,18 @@
-package com.example.awsServiceDemoTest2.Models;
+package com.example.awsServiceDemoTest2.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 @Data
-@Document
+@Document(collection = "books") //Sist tillagd 21/2 - från lektion 12/2
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Book {
-    @Id
+    @MongoId
     private Long id;
     private String title;
     private String author;

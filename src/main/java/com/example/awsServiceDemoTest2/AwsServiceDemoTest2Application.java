@@ -9,5 +9,4 @@ public class AwsServiceDemoTest2Application {
 	public static void main(String[] args) {
 		SpringApplication.run(AwsServiceDemoTest2Application.class, args);
 	}
-
 }
